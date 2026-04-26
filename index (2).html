@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>نُور الذات</title>
+<meta name="google-site-verification" content="DTMt5S4AHfuZYOJlW3rS4Fdio6anowD6sVl_k4HwY68" />
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --cream:#faf7f2;--warm:#f5efe6;--sand:#e8ddd0;
+  --primary:#c17a5a;--deep:#3a2a1e;--sage:#7a9e7e;
+  --gold:#c4a55a;--text-main:#2c1f14;--text-muted:#8a7060;
+}
+body{font-family:'Tajawal',sans-serif;background:var(--cream);color:var(--text-main);min-height:100vh}
+nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 2.5rem;background:var(--cream);border-bottom:1px solid var(--sand);position:sticky;top:0;z-index:100}
+.brand-name{font-size:1.4rem;font-weight:900;color:var(--deep)}
+.brand-sub{font-size:.7rem;color:var(--text-muted);font-weight:300}
+.nav-links{display:flex;gap:1.8rem;list-style:none}
+.nav-links a{color:var(--text-muted);text-decoration:none;font-size:.9rem;transition:color .2s}
+.nav-links a:hover{color:var(--primary)}
+.nav-right{display:flex;gap:.7rem;align-items:center}
+.cart-pill{display:flex;align-items:center;gap:.5rem;background:var(--deep);color:var(--cream);padding:.45rem 1.1rem;border-radius:30px;font-family:'Tajawal',sans-serif;font-size:.85rem;cursor:pointer;border:none;transition:background .2s}
+.cart-pill:hover{background:var(--primary)}
+.cart-num{background:var(--primary);width:20px;height:20px;border-radius:50%;font-size:.7rem;display:flex;align-items:center;justify-content:center;font-weight:700}
+.admin-trigger{background:none;border:none;cursor:pointer;font-size:1.2rem;opacity:.25;transition:opacity .3s;padding:.3rem}
+.admin-trigger:hover{opacity:1}
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:480px;overflow:hidden}
+.hero-text{background:var(--warm);padding:4rem 3rem;display:flex;flex-direction:column;justify-content:center}
+.hero-tag{display:inline-block;background:var(--sand);color:var(--primary);font-size:.75rem;font-weight:700;padding:.3rem .9rem;border-radius:20px;margin-bottom:1.2rem}
+.hero h1{font-size:2.6rem;font-weight:900;line-height:1.25;color:var(--deep);margin-bottom:1rem}
+.hero h1 em{font-style:normal;color:var(--primary)}
+.hero-desc{color:var(--text-muted);font-size:.95rem;line-height:1.8;max-width:400px;margin-bottom:2rem}
+.hero-cta{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-primary{background:var(--deep);color:var(--cream);border:none;padding:.7rem 1.8rem;border-radius:30px;font-family:'Tajawal',sans-serif;font-size:.95rem;font-weight:700;cursor:pointer;transition:all .2s}
+.btn-primary:hover{background:var(--primary)}
+.btn-ghost{background:transparent;color:var(--deep);border:1.5px solid var(--sand);padding:.7rem 1.5rem;border-radius:30px;font-family:'Tajawal',sans-serif;font-size:.95rem;cursor:pointer;transition:all .2s}
+.btn-ghost:hover{border-color:var(--primary);color:var(--primary)}
+.hero-visual{background:linear-gradient(135deg,#e8ddd0,#d4c4b0);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;min-height:380px}
+.book-stack{position:relative;width:100%;height:380px}
+.book-float{position:absolute;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.4rem;font-family:'Tajawal',sans-serif;font-size:.8rem;font-weight:700;color:#fff;padding:1.2rem;text-align:center;box-shadow:0 8px 32px rgba(0,0,0,.15)}
+.book-float:nth-child(1){width:130px;height:170px;background:var(--primary);top:80px;right:60px;transform:rotate(-8deg)}
+.book-float:nth-child(2){width:140px;height:180px;background:var(--deep);top:90px;left:60px;transform:rotate(4deg);z-index:2}
+.book-float:nth-child(3){width:120px;height:155px;background:var(--sage);top:160px;right:110px;transform:rotate(-2deg)}
+.book-icon{font-size:2rem}
+.book-line{width:60%;height:2px;background:rgba(255,255,255,.3);border-radius:2px}
+.book-line2{width:40%;height:2px;background:rgba(255,255,255,.2);border-radius:2px}
+.stats-bar{background:var(--deep);display:flex;justify-content:center;gap:4rem;padding:1.5rem;flex-wrap:wrap}
+.stat{text-align:center;color:var(--cream)}
+.stat-n{font-size:1.5rem;font-weight:900;color:var(--gold)}
+.stat-l{font-size:.75rem;color:rgba(255,255,255,.6);margin-top:.2rem}
+.section-header{text-align:center;padding:3rem 2rem 1.5rem}
+.section-tag{display:inline-block;background:var(--warm);color:var(--primary);font-size:.75rem;font-weight:700;padding:.25rem .8rem;border-radius:20px;margin-bottom:.8rem;border:1px solid var(--sand)}
+.section-title{font-size:1.8rem;font-weight:900;color:var(--deep)}
+.section-desc{color:var(--text-muted);font-size:.9rem;margin-top:.5rem}
+.filters{display:flex;gap:.6rem;justify-content:center;padding:.5rem 2rem 2rem;flex-wrap:wrap}
+.fbtn{border:1.5px solid var(--sand);background:transparent;color:var(--text-muted);padding:.4rem 1.1rem;border-radius:30px;font-family:'Tajawal',sans-serif;font-size:.85rem;cursor:pointer;transition:all .2s;font-weight:500}
+.fbtn.active,.fbtn:hover{background:var(--primary);color:#fff;border-color:var(--primary)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1.4rem;padding:0 2.5rem 4rem;max-width:1150px;margin:0 auto}
+.card{background:#fff;border:1px solid var(--sand);border-radius:16px;overflow:hidden;transition:all .25s}
+.card:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(58,42,30,.1);border-color:var(--primary)}
+.card-cover{height:180px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.6rem;position:relative;overflow:hidden}
+.card-emoji{font-size:2.8rem;z-index:1}
+.card-cover-title{font-family:'Tajawal',sans-serif;font-size:.85rem;font-weight:700;color:#fff;z-index:1;text-align:center;padding:0 1rem;line-height:1.4;text-shadow:0 1px 4px rgba(0,0,0,.3)}
+.cover-deco{position:absolute;bottom:-20px;right:-20px;width:80px;height:80px;border-radius:50%;background:rgba(255,255,255,.1)}
+.cover-deco2{position:absolute;top:-15px;left:-15px;width:60px;height:60px;border-radius:50%;background:rgba(255,255,255,.08)}
+.badge{position:absolute;top:10px;right:10px;background:var(--gold);color:var(--deep);font-size:.65rem;font-weight:700;padding:.2rem .6rem;border-radius:20px;font-family:'Tajawal',sans-serif}
+.card-body{padding:1.2rem}
+.cat-label{font-size:.72rem;color:var(--primary);font-weight:700;margin-bottom:.3rem}
+.card-title{font-size:.98rem;font-weight:700;color:var(--deep);margin-bottom:.4rem;line-height:1.4}
+.card-desc{font-size:.8rem;color:var(--text-muted);line-height:1.7;margin-bottom:1rem}
+.card-tags{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem}
+.tag{background:var(--warm);color:var(--text-muted);font-size:.68rem;padding:.2rem .55rem;border-radius:10px;border:1px solid var(--sand);font-family:'Tajawal',sans-serif}
+.card-footer{display:flex;align-items:center;justify-content:space-between}
+.price{font-size:1.15rem;font-weight:900;color:var(--deep)}
+.price-sub{font-size:.7rem;color:var(--text-muted);font-weight:400;display:block}
+.add-btn{background:var(--deep);color:#fff;border:none;padding:.45rem 1.1rem;border-radius:8px;font-family:'Tajawal',sans-serif;font-size:.82rem;font-weight:700;cursor:pointer;transition:all .2s}
+.add-btn:hover{background:var(--primary)}
+.overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:200}
+.overlay.open{display:block}
+.cart-sidebar{position:fixed;left:0;top:0;height:100%;width:360px;background:var(--cream);z-index:201;transform:translateX(-100%);transition:transform .3s;padding:2rem;overflow-y:auto;border-right:1px solid var(--sand)}
+.cart-sidebar.open{transform:translateX(0)}
+.cart-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem}
+.cart-header h2{font-size:1.2rem;font-weight:900;color:var(--deep)}
+.close-btn{background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--text-muted)}
+.cart-empty{text-align:center;color:var(--text-muted);padding:3rem 0;font-size:.9rem}
+.cart-item{display:flex;gap:1rem;align-items:flex-start;padding:.8rem 0;border-bottom:1px solid var(--sand)}
+.cart-item-emoji{font-size:2rem;background:var(--warm);width:50px;height:50px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.cart-item-info{flex:1}
+.cart-item-title{font-size:.85rem;font-weight:700;color:var(--deep);margin-bottom:.2rem}
+.cart-item-price{font-size:.85rem;color:var(--primary);font-weight:700}
+.remove-btn{background:none;border:none;color:var(--text-muted);cursor:pointer;font-size:1rem}
+.cart-total{margin-top:1.5rem;padding-top:1rem;border-top:2px solid var(--sand)}
+.cart-total-row{display:flex;justify-content:space-between;margin-bottom:.5rem;font-size:.9rem;color:var(--text-muted)}
+.cart-total-main{display:flex;justify-content:space-between;font-size:1.1rem;font-weight:900;color:var(--deep);margin-top:.5rem}
+.checkout-btn{width:100%;background:var(--deep);color:#fff;border:none;padding:.9rem;border-radius:12px;font-family:'Tajawal',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;margin-top:1.2rem;transition:background .2s}
+.checkout-btn:hover{background:var(--primary)}
+.quote-section{background:var(--warm);padding:3rem 2rem;text-align:center;border-top:1px solid var(--sand);border-bottom:1px solid var(--sand)}
+.quote-mark{font-size:3rem;color:var(--sand);line-height:1}
+.quote-text{font-size:1.2rem;font-weight:500;color:var(--deep);max-width:600px;margin:.5rem auto;line-height:1.8}
+.quote-author{font-size:.85rem;color:var(--text-muted);margin-top:.8rem}
+.toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(120px);background:var(--deep);color:var(--cream);padding:.7rem 1.8rem;border-radius:30px;font-family:'Tajawal',sans-serif;font-size:.9rem;transition:transform .3s;z-index:999;display:flex;align-items:center;gap:.5rem}
+.toast.show{transform:translateX(-50%) translateY(0)}
+.toast-dot{width:8px;height:8px;background:var(--sage);border-radius:50%;flex-shrink:0}
+footer{background:var(--deep);color:rgba(255,255,255,.5);text-align:center;padding:2rem;font-size:.8rem}
+footer span{color:var(--gold)}
+
+/* ════ لوحة تحكم المالك ════ */
+.admin-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:500}
+.admin-overlay.open{display:block}
+.admin-login{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:#fff;border-radius:20px;padding:2.5rem 2rem;width:320px;z-index:501;text-align:center;box-shadow:0 24px 64px rgba(0,0,0,.3)}
+.admin-login .lock{font-size:2.5rem;margin-bottom:.5rem}
+.admin-login h2{font-size:1.2rem;font-weight:900;color:var(--deep);margin-bottom:.3rem}
+.admin-login p{font-size:.82rem;color:var(--text-muted);margin-bottom:1.3rem}
+.admin-login input{width:100%;border:1.5px solid var(--sand);background:var(--cream);border-radius:10px;padding:.7rem 1rem;font-family:'Tajawal',sans-serif;font-size:1.1rem;text-align:center;letter-spacing:.2em;outline:none;margin-bottom:.8rem;transition:border .2s}
+.admin-login input:focus{border-color:var(--primary)}
+.login-btn{width:100%;background:var(--deep);color:#fff;border:none;padding:.8rem;border-radius:10px;font-family:'Tajawal',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:background .2s}
+.login-btn:hover{background:var(--primary)}
+.login-cancel{width:100%;background:none;border:1px solid var(--sand);color:var(--text-muted);border-radius:10px;padding:.6rem;font-family:'Tajawal',sans-serif;font-size:.85rem;cursor:pointer;margin-top:.5rem;transition:all .2s}
+.login-cancel:hover{border-color:var(--primary);color:var(--primary)}
+.pass-err{color:#c0392b;font-size:.8rem;margin-top:.4rem;display:none}
+
+/* لوحة التحكم الجانبية */
+.admin-panel{position:fixed;right:0;top:0;height:100%;width:440px;background:#fff;z-index:501;transform:translateX(110%);transition:transform .35s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column;box-shadow:-8px 0 40px rgba(0,0,0,.15)}
+.admin-panel.open{transform:translateX(0)}
+.ap-header{background:var(--deep);padding:1.2rem 1.5rem;display:flex;justify-content:space-between;align-items:center;flex-shrink:0}
+.ap-header h2{color:#fff;font-size:1rem;font-weight:700;display:flex;align-items:center;gap:.5rem}
+.ap-header-sub{color:rgba(255,255,255,.5);font-size:.75rem;font-weight:400}
+.ap-close{background:rgba(255,255,255,.1);border:none;color:#fff;font-size:1rem;cursor:pointer;width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.ap-close:hover{background:rgba(255,255,255,.2)}
+.ap-tabs{display:flex;border-bottom:2px solid var(--sand);flex-shrink:0;background:#fff}
+.ap-tab{flex:1;padding:.85rem .5rem;background:none;border:none;border-bottom:2px solid transparent;margin-bottom:-2px;font-family:'Tajawal',sans-serif;font-size:.82rem;font-weight:500;color:var(--text-muted);cursor:pointer;transition:all .2s}
+.ap-tab.active{color:var(--primary);border-bottom-color:var(--primary);font-weight:700}
+.ap-body{padding:1.4rem;flex:1;overflow-y:auto}
+.ap-section{display:none}
+.ap-section.active{display:block}
+.ap-group{margin-bottom:1.4rem}
+.ap-group-title{font-size:.7rem;font-weight:900;color:var(--text-muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.8rem;padding-bottom:.4rem;border-bottom:1px solid var(--sand)}
+.ap-label{font-size:.78rem;font-weight:700;color:var(--text-muted);margin-bottom:.3rem;display:block}
+.ap-input{width:100%;border:1.5px solid var(--sand);background:var(--cream);border-radius:8px;padding:.6rem .9rem;font-family:'Tajawal',sans-serif;font-size:.88rem;outline:none;margin-bottom:.9rem;transition:border .2s;color:var(--text-main)}
+.ap-input:focus{border-color:var(--primary);background:#fff}
+.ap-row{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+.ap-color-row{display:flex;align-items:center;gap:.8rem;margin-bottom:.7rem;background:var(--cream);padding:.55rem .9rem;border-radius:8px;border:1px solid var(--sand)}
+.ap-color-label{flex:1;font-size:.83rem;color:var(--text-main)}
+.ap-color-preview{width:20px;height:20px;border-radius:4px;border:1px solid var(--sand);flex-shrink:0}
+.ap-color-row input[type=color]{width:36px;height:32px;border:none;border-radius:6px;cursor:pointer;padding:0;background:none;flex-shrink:0}
+.ap-save-btn{width:100%;background:var(--deep);color:#fff;border:none;padding:.8rem;border-radius:10px;font-family:'Tajawal',sans-serif;font-size:.95rem;font-weight:700;cursor:pointer;transition:background .2s;margin-top:.3rem;display:flex;align-items:center;justify-content:center;gap:.5rem}
+.ap-save-btn:hover{background:var(--primary)}
+.ap-saved-msg{text-align:center;color:var(--sage);font-size:.82rem;margin-top:.6rem;font-weight:700;display:none}
+
+/* كتب الإدارة */
+.book-admin-card{background:var(--cream);border:1px solid var(--sand);border-radius:12px;padding:.9rem 1rem;margin-bottom:.7rem;transition:border .2s}
+.book-admin-card:hover{border-color:var(--primary)}
+.bac-top{display:flex;align-items:center;gap:.7rem;cursor:pointer}
+.bac-emoji{font-size:1.6rem;background:#fff;width:40px;height:40px;border-radius:8px;display:flex;align-items:center;justify-content:center;border:1px solid var(--sand);flex-shrink:0}
+.bac-info{flex:1;min-width:0}
+.bac-title{font-size:.88rem;font-weight:700;color:var(--deep);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bac-price{font-size:.78rem;color:var(--primary);font-weight:700}
+.bac-arrow{font-size:.8rem;color:var(--text-muted);transition:transform .2s;flex-shrink:0}
+.bac-arrow.open{transform:rotate(180deg)}
+.bac-fields{display:none;padding-top:.9rem;margin-top:.7rem;border-top:1px solid var(--sand)}
+.bac-fields.open{display:block}
+.bac-del{width:100%;background:none;border:1px solid #e74c3c;color:#e74c3c;border-radius:8px;padding:.5rem;font-family:'Tajawal',sans-serif;font-size:.8rem;cursor:pointer;margin-top:.4rem;transition:all .2s}
+.bac-del:hover{background:#e74c3c;color:#fff}
+.add-book-btn{width:100%;background:var(--sage);color:#fff;border:none;border-radius:10px;padding:.75rem;font-family:'Tajawal',sans-serif;font-size:.9rem;font-weight:700;cursor:pointer;margin-bottom:1rem;transition:opacity .2s;display:flex;align-items:center;justify-content:center;gap:.5rem}
+.add-book-btn:hover{opacity:.85}
+.pass-change-section{background:var(--cream);border:1px solid var(--sand);border-radius:10px;padding:1rem;margin-top:1rem}
+.pdf-upload-box{border:2px dashed var(--sand);border-radius:10px;padding:1rem;text-align:center;cursor:pointer;transition:all .2s;background:var(--cream);margin-bottom:.9rem}
+.pdf-upload-box:hover{border-color:var(--primary);background:#fff}
+.pdf-status{font-size:.78rem;font-weight:700;padding:.35rem .8rem;border-radius:20px;display:inline-block;margin-top:.4rem}
+.pdf-status.has-file{background:#eaf5ea;color:#2e6b30}
+.pdf-status.no-file{background:var(--warm);color:var(--text-muted)}
+
+@media(max-width:700px){
+  .hero{grid-template-columns:1fr}
+  .hero-visual{display:none}
+  nav{padding:1rem 1.2rem}
+  .nav-links{display:none}
+  .grid{padding:0 1rem 3rem}
+  .stats-bar{gap:2rem}
+  .cart-sidebar,.admin-panel{width:100%}
+}
+</style>
+<script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+</head>
+<body>
+
+<nav>
+  <div>
+    <div class="brand-name" id="vBrandName" onclick="secretClick()" style="cursor:default;user-select:none">نُور الذات</div>
+    <div class="brand-sub" id="vBrandSub">كتب تطوير الذات · نسخة رقمية</div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#">الرئيسية</a></li>
+    <li><a href="#shop">مكتبتنا</a></li>
+    <li><a href="#about">من نحن</a></li>
+    <li><a href="mailto:nooralzat99@gmail.com">تواصل معنا</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="cart-pill" onclick="openCart()">🛒 السلة <span class="cart-num" id="cnt">0</span></button>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-text">
+    <span class="hero-tag" id="vHeroTag">✦ مكتبة رقمية للتطوير الذاتي</span>
+    <h1 id="vHeroTitle">اقرأ، تأمّل،<br><em>وكن نسخة أعمق من نفسك</em></h1>
+    <p class="hero-desc" id="vHeroDesc">كتب رقمية مركّزة تساعدك على فهم نفسك وتغيير أنماط تفكيرك — بأسلوب عميق وعملي في آنٍ واحد.</p>
+    <div class="hero-cta">
+      <button class="btn-primary" onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})">تصفح المكتبة</button>
+      <button class="btn-ghost" onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})">اعرف أكثر</button>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="book-stack">
+      <div class="book-float"><span class="book-icon">🌱</span><span>تجاوز السلبية</span><div class="book-line"></div><div class="book-line2"></div></div>
+      <div class="book-float"><span class="book-icon">🧠</span><span>إعادة برمجة الذهن</span><div class="book-line"></div><div class="book-line2"></div></div>
+      <div class="book-float"><span class="book-icon">🥗</span><span>الغذاء والروح</span><div class="book-line"></div><div class="book-line2"></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="stats-bar" id="vStatsBar">
+  <div class="stat"><div class="stat-n">+80</div><div class="stat-l">كتاباً رقمياً</div></div>
+  <div class="stat"><div class="stat-n">12k+</div><div class="stat-l">قارئ استفاد</div></div>
+  <div class="stat"><div class="stat-n">فوري</div><div class="stat-l">تسليم بعد الدفع</div></div>
+  <div class="stat"><div class="stat-n">97%</div><div class="stat-l">رضا القراء</div></div>
+</div>
+
+<div class="section-header" id="shop">
+  <span class="section-tag" id="vShopTag">مكتبتنا الرقمية</span>
+  <h2 class="section-title" id="vShopTitle">اختر كتابك</h2>
+  <p class="section-desc" id="vShopDesc">كل كتاب يتناول فكرة واحدة بعمق — مختصر وعملي وسهل التطبيق</p>
+</div>
+
+<div class="filters">
+  <button class="fbtn active" onclick="filter('all',this)">الكل</button>
+  <button class="fbtn" onclick="filter('mind',this)">العقل والأفكار</button>
+  <button class="fbtn" onclick="filter('health',this)">الصحة النفسية</button>
+  <button class="fbtn" onclick="filter('food',this)">الغذاء والجسد</button>
+  <button class="fbtn" onclick="filter('beliefs',this)">المعتقدات</button>
+  <button class="fbtn" onclick="filter('energy',this)">الطاقة والعلاقات</button>
+</div>
+<div class="grid" id="grid"></div>
+
+<div class="quote-section">
+  <div class="quote-mark">"</div>
+  <p class="quote-text" id="vQuote">التغيير الحقيقي لا يبدأ بالإرادة — يبدأ بالفهم.</p>
+  <p class="quote-author" id="vQuoteAuthor">— من مجموعة نُور الذات</p>
+</div>
+
+<!-- CART -->
+<div class="overlay" id="overlay" onclick="closeCart()"></div>
+<div class="cart-sidebar" id="cartSidebar">
+  <div class="cart-header"><h2>🛒 سلة التسوق</h2><button class="close-btn" onclick="closeCart()">✕</button></div>
+  <div id="cartItems"><p class="cart-empty">سلتك فارغة<br>أضف كتاباً للبدء ✨</p></div>
+  <div class="cart-total" id="cartTotal" style="display:none">
+    <div class="cart-total-row"><span>المجموع</span><span id="subtotal">0 ر.س</span></div>
+    <div class="cart-total-row"><span>التسليم</span><span style="color:#7a9e7e">رقمي فوري</span></div>
+    <div class="cart-total-main"><span>الإجمالي</span><span id="total">0 ر.س</span></div>
+    <button class="checkout-btn" onclick="checkout()">اشترِ الآن →</button>
+  </div>
+</div>
+
+<!-- ADMIN LOGIN -->
+<div class="admin-overlay" id="adminOverlay"></div>
+<div class="admin-login" id="adminLogin" style="display:none">
+  <div class="lock">🔐</div>
+  <h2>لوحة تحكم المالك</h2>
+  <p>أدخل كلمة السر للدخول</p>
+  <div style="position:relative;width:100%">
+    <input type="password" id="adminPass" placeholder="••••••" maxlength="20" onkeydown="if(event.key==='Enter')checkPass()" style="width:100%;padding-left:2.5rem">
+    <button onclick="togglePassVis('adminPass',this)" style="position:absolute;left:.7rem;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;font-size:1rem;color:#8a7060" title="إظهار/إخفاء">👁</button>
+  </div>
+  <button class="login-btn" onclick="checkPass()">دخول</button>
+  <button class="login-cancel" onclick="closeAdminLogin()">إلغاء</button>
+  <p class="pass-err" id="passErr">❌ كلمة السر خاطئة، المحاولات المتبقية: <span id="attemptsLeft">3</span></p>
+</div>
+
+<!-- ADMIN PANEL -->
+<div class="admin-panel" id="adminPanel">
+  <div class="ap-header">
+    <h2>⚙️ لوحة التحكم <span class="ap-header-sub">/ نُور الذات</span></h2>
+    <button class="ap-close" onclick="closeAdmin()">✕</button>
+  </div>
+  <div class="ap-tabs">
+    <button class="ap-tab active" onclick="apTab('general',this)">🏠 عام</button>
+    <button class="ap-tab" onclick="apTab('colors',this)">🎨 الألوان</button>
+    <button class="ap-tab" onclick="apTab('books',this)">📚 الكتب</button>
+    <button class="ap-tab" onclick="apTab('settings',this)">🔑 إعدادات</button>
+  </div>
+  <div class="ap-body">
+
+    <!-- عام -->
+    <div class="ap-section active" id="tab-general">
+      <div class="ap-group">
+        <div class="ap-group-title">الهوية</div>
+        <label class="ap-label">اسم الموقع</label>
+        <input class="ap-input" id="ap-brandName" value="نُور الذات">
+        <label class="ap-label">الوصف تحت الاسم</label>
+        <input class="ap-input" id="ap-brandSub" value="كتب مصغرة · تطوير النفس">
+      </div>
+      <div class="ap-group">
+        <div class="ap-group-title">قسم Hero</div>
+        <label class="ap-label">الشارة العلوية</label>
+        <input class="ap-input" id="ap-heroTag" value="✦ مكتبة رقمية للنمو الذاتي">
+        <label class="ap-label">السطر الأول من العنوان</label>
+        <input class="ap-input" id="ap-heroT1" value="اقرأ، فكّر،">
+        <label class="ap-label">السطر الثاني (الملوّن)</label>
+        <input class="ap-input" id="ap-heroT2" value="وأعد صياغة نفسك">
+        <label class="ap-label">وصف Hero</label>
+        <input class="ap-input" id="ap-heroDesc" value="كتب مصغرة مكثّفة تحمل حلولاً عميقة لأفكار ومعتقدات تعيشها كل يوم.">
+      </div>
+      <div class="ap-group">
+        <div class="ap-group-title">الإحصائيات الأربع</div>
+        <div class="ap-row">
+          <div><label class="ap-label">رقم ١</label><input class="ap-input" id="s1n" value="+80"></div>
+          <div><label class="ap-label">نص ١</label><input class="ap-input" id="s1l" value="كتاب مصغر"></div>
+        </div>
+        <div class="ap-row">
+          <div><label class="ap-label">رقم ٢</label><input class="ap-input" id="s2n" value="12k+"></div>
+          <div><label class="ap-label">نص ٢</label><input class="ap-input" id="s2l" value="قارئ استفاد"></div>
+        </div>
+        <div class="ap-row">
+          <div><label class="ap-label">رقم ٣</label><input class="ap-input" id="s3n" value="24h"></div>
+          <div><label class="ap-label">نص ٣</label><input class="ap-input" id="s3l" value="تحميل فوري"></div>
+        </div>
+        <div class="ap-row">
+          <div><label class="ap-label">رقم ٤</label><input class="ap-input" id="s4n" value="97%"></div>
+          <div><label class="ap-label">نص ٤</label><input class="ap-input" id="s4l" value="رضا القراء"></div>
+        </div>
+      </div>
+      <div class="ap-group">
+        <div class="ap-group-title">الاقتباس</div>
+        <label class="ap-label">النص</label>
+        <input class="ap-input" id="ap-quote" value="التغيير لا يبدأ بالإرادة — يبدأ بالفهم.">
+        <label class="ap-label">المصدر</label>
+        <input class="ap-input" id="ap-quoteAuthor" value="— من مجموعة نُور الذات">
+      </div>
+      <div class="ap-group">
+        <div class="ap-group-title">رابط الدفع</div>
+        <label class="ap-label">رابط Payhip أو PayTabs</label>
+        <input class="ap-input" id="ap-checkout" value="https://payhip.com/your-store">
+      </div>
+      <button class="ap-save-btn" onclick="saveGeneral()">💾 حفظ التعديلات</button>
+      <p class="ap-saved-msg" id="saved-general">✅ تم الحفظ بنجاح!</p>
+    </div>
+
+    <!-- الألوان -->
+    <div class="ap-section" id="tab-colors">
+      <div class="ap-group">
+        <div class="ap-group-title">الألوان الرئيسية — التغيير فوري</div>
+        <div class="ap-color-row">
+          <div class="ap-color-preview" id="prev-primary" style="background:#c17a5a"></div>
+          <span class="ap-color-label">اللون الرئيسي (الأزرار والتمييز)</span>
+          <input type="color" id="c-primary" value="#c17a5a" oninput="liveColor('primary',this.value)">
+        </div>
+        <div class="ap-color-row">
+          <div class="ap-color-preview" id="prev-deep" style="background:#3a2a1e"></div>
+          <span class="ap-color-label">اللون الداكن (الشعار والفوتر)</span>
+          <input type="color" id="c-deep" value="#3a2a1e" oninput="liveColor('deep',this.value)">
+        </div>
+        <div class="ap-color-row">
+          <div class="ap-color-preview" id="prev-cream" style="background:#faf7f2"></div>
+          <span class="ap-color-label">خلفية الصفحة</span>
+          <input type="color" id="c-cream" value="#faf7f2" oninput="liveColor('cream',this.value)">
+        </div>
+        <div class="ap-color-row">
+          <div class="ap-color-preview" id="prev-warm" style="background:#f5efe6"></div>
+          <span class="ap-color-label">خلفية Hero والاقتباس</span>
+          <input type="color" id="c-warm" value="#f5efe6" oninput="liveColor('warm',this.value)">
+        </div>
+        <div class="ap-color-row">
+          <div class="ap-color-preview" id="prev-sand" style="background:#e8ddd0"></div>
+          <span class="ap-color-label">لون الحدود والفواصل</span>
+          <input type="color" id="c-sand" value="#e8ddd0" oninput="liveColor('sand',this.value)">
+        </div>
+        <div class="ap-color-row">
+          <div class="ap-color-preview" id="prev-gold" style="background:#c4a55a"></div>
+          <span class="ap-color-label">اللون الذهبي (الشارات)</span>
+          <input type="color" id="c-gold" value="#c4a55a" oninput="liveColor('gold',this.value)">
+        </div>
+        <div class="ap-color-row">
+          <div class="ap-color-preview" id="prev-sage" style="background:#7a9e7e"></div>
+          <span class="ap-color-label">لون الإشعار</span>
+          <input type="color" id="c-sage" value="#7a9e7e" oninput="liveColor('sage',this.value)">
+        </div>
+      </div>
+      <button class="ap-save-btn" onclick="saveColors()">💾 حفظ الألوان</button>
+      <p class="ap-saved-msg" id="saved-colors">✅ تم حفظ الألوان!</p>
+    </div>
+
+    <!-- الكتب -->
+    <div class="ap-section" id="tab-books">
+      <button class="add-book-btn" onclick="window.addNewBookFirebase ? window.addNewBookFirebase() : addNewBook()">＋ إضافة كتاب جديد</button>
+      <div id="booksAdminList"></div>
+      <button class="ap-save-btn" onclick="window.saveBooksFirebase ? window.saveBooksFirebase() : saveBooks()">💾 حفظ جميع الكتب</button>
+      <p class="ap-saved-msg" id="saved-books">✅ تم حفظ الكتب!</p>
+    </div>
+
+    <!-- الإعدادات -->
+    <div class="ap-section" id="tab-settings">
+      <div class="ap-group">
+        <div class="ap-group-title">تغيير كلمة السر</div>
+        <label class="ap-label">كلمة السر الحالية</label>
+        <div style="position:relative"><input class="ap-input" type="password" id="oldPass" placeholder="••••••" style="padding-left:2.5rem"><button onclick="togglePassVis('oldPass',this)" style="position:absolute;left:.7rem;top:50%;transform:translateY(-60%);background:none;border:none;cursor:pointer;font-size:.9rem;color:#8a7060">👁</button></div>
+        <label class="ap-label">كلمة السر الجديدة</label>
+        <div style="position:relative"><input class="ap-input" type="password" id="newPass1" placeholder="••••••" style="padding-left:2.5rem"><button onclick="togglePassVis('newPass1',this)" style="position:absolute;left:.7rem;top:50%;transform:translateY(-60%);background:none;border:none;cursor:pointer;font-size:.9rem;color:#8a7060">👁</button></div>
+        <label class="ap-label">تأكيد كلمة السر الجديدة</label>
+        <div style="position:relative"><input class="ap-input" type="password" id="newPass2" placeholder="••••••" style="padding-left:2.5rem"><button onclick="togglePassVis('newPass2',this)" style="position:absolute;left:.7rem;top:50%;transform:translateY(-60%);background:none;border:none;cursor:pointer;font-size:.9rem;color:#8a7060">👁</button></div>
+        <button class="ap-save-btn" onclick="changePassword()">🔑 تغيير كلمة السر</button>
+        <p class="ap-saved-msg" id="saved-pass">✅ تم تغيير كلمة السر!</p>
+        <p class="pass-err" id="pass-change-err" style="display:none;text-align:center;margin-top:.5rem"></p>
+      </div>
+      <div class="ap-group" style="margin-top:1.5rem">
+        <div class="ap-group-title">معلومات</div>
+        <p style="font-size:.82rem;color:var(--text-muted);line-height:1.7">الزر ⚙️ في شريط التنقل خفي تقريباً — فقط أنت من تعرف مكانه. كلمة السر الافتراضية هي <strong>1234</strong> — غيّرها من هنا.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="toast" id="toast"><span class="toast-dot"></span> ✅ أُضيف إلى سلتك</div>
+
+<!-- من نحن -->
+<section id="about" style="background:var(--warm);padding:4rem 2rem;border-top:1px solid var(--sand)">
+  <div style="max-width:700px;margin:0 auto;text-align:center">
+    <span style="display:inline-block;background:var(--sand);color:var(--primary);font-size:.75rem;font-weight:700;padding:.3rem .9rem;border-radius:20px;margin-bottom:1rem">من نحن</span>
+    <h2 style="font-size:1.8rem;font-weight:900;color:var(--deep);margin-bottom:1rem">نُور الذات</h2>
+    <p style="color:var(--text-muted);font-size:.95rem;line-height:1.9;margin-bottom:1.5rem">نُور الذات سلسلة كتب رقمية متخصصة في التطوير الذاتي والنمو الداخلي — نؤمن أن التغيير الحقيقي يبدأ بفهم النفس. كل كتاب يتناول فكرة واحدة بعمق، بأسلوب مباشر وعملي يسهل تطبيقه في حياتك اليومية.</p>
+    <a href="mailto:nooralzat99@gmail.com" style="display:inline-flex;align-items:center;gap:.5rem;background:var(--deep);color:#fff;padding:.7rem 1.8rem;border-radius:30px;text-decoration:none;font-weight:700;font-size:.9rem;transition:background .2s">📧 تواصل معنا</a>
+  </div>
+</section>
+
+<!-- نافذة الشروط -->
+<div id="termsModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:999;overflow-y:auto">
+  <div style="max-width:680px;margin:2rem auto;background:#fff;border-radius:20px;padding:2.5rem;position:relative">
+    <button onclick="document.getElementById('termsModal').style.display='none'" style="position:absolute;top:1rem;left:1rem;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--text-muted)">✕</button>
+    <h2 style="font-size:1.4rem;font-weight:900;color:var(--deep);margin-bottom:1.5rem;text-align:center">شروط الاستخدام</h2>
+    <div style="color:var(--text-muted);font-size:.9rem;line-height:1.9">
+      <p style="margin-bottom:1rem">مرحباً بك في نُور الذات. باستخدامك لهذا الموقع أو شرائك أي منتج منه، فأنت توافق على الشروط التالية:</p>
+      <p style="font-weight:700;color:var(--deep);margin-bottom:.5rem">١. المنتجات الرقمية</p>
+      <p style="margin-bottom:1rem">جميع المنتجات المعروضة كتب رقمية بصيغة PDF. بعد إتمام الشراء يحق لك استخدامها للاستخدام الشخصي فقط، ولا يجوز إعادة بيعها أو توزيعها.</p>
+      <p style="font-weight:700;color:var(--deep);margin-bottom:.5rem">٢. الملكية الفكرية</p>
+      <p style="margin-bottom:1rem">جميع محتويات الموقع والكتب محمية بحقوق الملكية الفكرية لنُور الذات. يُحظر نسخها أو توزيعها دون إذن كتابي.</p>
+      <p style="font-weight:700;color:var(--deep);margin-bottom:.5rem">٣. التعديلات</p>
+      <p style="margin-bottom:1rem">نحتفظ بحق تعديل هذه الشروط في أي وقت. يُعدّ استمرارك في استخدام الموقع موافقةً على أي تغييرات.</p>
+      <p style="font-weight:700;color:var(--deep);margin-bottom:.5rem">٤. التواصل</p>
+      <p>لأي استفسار: <a href="mailto:nooralzat99@gmail.com" style="color:var(--primary)">nooralzat99@gmail.com</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- نافذة الخصوصية -->
+<div id="privacyModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:999;overflow-y:auto">
+  <div style="max-width:680px;margin:2rem auto;background:#fff;border-radius:20px;padding:2.5rem;position:relative">
+    <button onclick="document.getElementById('privacyModal').style.display='none'" style="position:absolute;top:1rem;left:1rem;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--text-muted)">✕</button>
+    <h2 style="font-size:1.4rem;font-weight:900;color:var(--deep);margin-bottom:1.5rem;text-align:center">سياسة الخصوصية</h2>
+    <div style="color:var(--text-muted);font-size:.9rem;line-height:1.9">
+      <p style="margin-bottom:1rem">نحن في نُور الذات نحترم خصوصيتك ونلتزم بحماية بياناتك الشخصية.</p>
+      <p style="font-weight:700;color:var(--deep);margin-bottom:.5rem">١. البيانات التي نجمعها</p>
+      <p style="margin-bottom:1rem">لا نجمع أي بيانات شخصية مباشرة عبر موقعنا. عمليات الدفع تتم عبر Gumroad الذي له سياسة خصوصية مستقلة.</p>
+      <p style="font-weight:700;color:var(--deep);margin-bottom:.5rem">٢. ملفات تعريف الارتباط</p>
+      <p style="margin-bottom:1rem">نستخدم localStorage لحفظ تفضيلاتك المحلية فقط (مثل الألوان والسلة) ولا نشاركها مع أطراف ثالثة.</p>
+      <p style="font-weight:700;color:var(--deep);margin-bottom:.5rem">٣. التواصل</p>
+      <p>لأي استفسار حول خصوصيتك: <a href="mailto:nooralzat99@gmail.com" style="color:var(--primary)">nooralzat99@gmail.com</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- نافذة الاسترداد -->
+<div id="refundModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:999;overflow-y:auto">
+  <div style="max-width:680px;margin:2rem auto;background:#fff;border-radius:20px;padding:2.5rem;position:relative">
+    <button onclick="document.getElementById('refundModal').style.display='none'" style="position:absolute;top:1rem;left:1rem;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--text-muted)">✕</button>
+    <h2 style="font-size:1.4rem;font-weight:900;color:var(--deep);margin-bottom:1.5rem;text-align:center">سياسة الاسترداد</h2>
+    <div style="color:var(--text-muted);font-size:.9rem;line-height:1.9">
+      <p style="margin-bottom:1rem">نسعى دائماً لرضاك التام. إليك سياسة الاسترداد الخاصة بنا:</p>
+      <p style="font-weight:700;color:var(--deep);margin-bottom:.5rem">١. ضمان الرضا</p>
+      <p style="margin-bottom:1rem">إذا لم تكن راضياً عن الكتاب خلال 7 أيام من الشراء، تواصل معنا وسنعيد لك المبلغ كاملاً دون أسئلة.</p>
+      <p style="font-weight:700;color:var(--deep);margin-bottom:.5rem">٢. شروط الاسترداد</p>
+      <p style="margin-bottom:1rem">يجب تقديم طلب الاسترداد خلال 7 أيام من تاريخ الشراء مع ذكر سبب الاسترداد.</p>
+      <p style="font-weight:700;color:var(--deep);margin-bottom:.5rem">٣. طريقة الاسترداد</p>
+      <p style="margin-bottom:1rem">يُعاد المبلغ لنفس وسيلة الدفع المستخدمة خلال 5-10 أيام عمل.</p>
+      <p style="font-weight:700;color:var(--deep);margin-bottom:.5rem">٤. التواصل</p>
+      <p>لطلب الاسترداد: <a href="mailto:nooralzat99@gmail.com" style="color:var(--primary)">nooralzat99@gmail.com</a></p>
+    </div>
+  </div>
+</div>
+
+<footer style="background:var(--deep);color:rgba(255,255,255,.5);text-align:center;padding:2rem;font-size:.8rem">
+  <p style="margin-bottom:.8rem">© 2026 <span id="vFooterName" style="color:var(--gold)">نُور الذات</span> · جميع الحقوق محفوظة · <span style="color:var(--gold)">تسليم رقمي فوري</span></p>
+  <p style="margin-bottom:.8rem">
+    <a href="mailto:nooralzat99@gmail.com" style="color:rgba(255,255,255,.6);text-decoration:none;margin:0 .8rem">📧 nooralzat99@gmail.com</a>
+  </p>
+  <p>
+    <a href="#" onclick="document.getElementById('termsModal').style.display='block'" style="color:rgba(255,255,255,.4);text-decoration:none;margin:0 .8rem;font-size:.75rem">شروط الاستخدام</a>
+    <a href="#" onclick="document.getElementById('privacyModal').style.display='block'" style="color:rgba(255,255,255,.4);text-decoration:none;margin:0 .8rem;font-size:.75rem">سياسة الخصوصية</a>
+    <a href="#" onclick="document.getElementById('refundModal').style.display='block'" style="color:rgba(255,255,255,.4);text-decoration:none;margin:0 .8rem;font-size:.75rem">سياسة الاسترداد</a>
+  </p>
+</footer>
+
+<script>
+async function hashPass(pass){
+  const buf=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(pass));
+  return Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');
+}
+const DEFAULT_HASH='03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4';
+let ADMIN_HASH=localStorage.getItem('noor_admin_hash')||DEFAULT_HASH;
+let loginAttempts=0;
+const MAX_ATTEMPTS=3;
+
+function isLocked(){
+  const lockTime=localStorage.getItem('noor_lock_time');
+  if(!lockTime) return false;
+  const diff=Date.now()-parseInt(lockTime);
+  return diff < 5*60*1000;
+}
+function getLockRemaining(){
+  const lockTime=localStorage.getItem('noor_lock_time');
+  if(!lockTime) return 0;
+  const remaining=5*60*1000-(Date.now()-parseInt(lockTime));
+  return Math.max(0,Math.ceil(remaining/1000));
+}
+function formatTime(sec){
+  const m=Math.floor(sec/60);
+  const s=sec%60;
+  return m+':'+(s<10?'0':'')+s;
+}
+let checkoutURL = 'https://payhip.com/your-store';
+let books = [
+  {id:1,emoji:'🌑',title:'دليل تجاوز السلبية',desc:'كيف تُحوّل دوامة الأفكار السلبية إلى وعي هادئ يمنحك مساحة للتفكير والتقدم.',price:49,cat:'mind',bg:'#3a2a1e',tags:'السلبية,الأفكار,الحرية',badge:'الأكثر قراءة'},
+  {id:2,emoji:'🧠',title:'برمجة العقل الباطن',desc:'كيف تتشكّل معتقداتنا في العمق، وكيف نُعيد كتابتها بوعي حقيقي وإرادة راسخة.',price:59,cat:'beliefs',bg:'#5a3a5a',tags:'المعتقدات,اللاوعي',badge:''},
+  {id:3,emoji:'🌿',title:'الغذاء والعقل',desc:'العلاقة المخفية بين ما تأكله ومزاجك وتفكيرك — وكيف تختار ما يُغذّي عقلك.',price:45,cat:'food',bg:'#3a5a3a',tags:'غذاء,صحة,تركيز',badge:'جديد'},
+  {id:4,emoji:'💛',title:'من الخوف إلى الثقة',desc:'رحلة عملية لاستبدال الخوف والتردد بثقة هادئة تنبع من الداخل.',price:55,cat:'health',bg:'#5a4a2a',tags:'الثقة,الخوف,الجرأة',badge:''},
+  {id:5,emoji:'🌸',title:'حدودي مع الآخرين',desc:'كيف ترسم حدوداً صحية في علاقاتك دون أن تشعر بالذنب أو تخسر من تحب.',price:49,cat:'energy',bg:'#5a3a45',tags:'الحدود,العلاقات',badge:'مميز'},
+  {id:6,emoji:'☀️',title:'الإرهاق العاطفي',desc:'لماذا تشعر بالتعب رغم أنك لم تبذل جهداً جسدياً — وكيف تستعيد طاقتك الداخلية.',price:52,cat:'health',bg:'#4a3a2a',tags:'الإرهاق,العواطف',badge:''},
+  {id:7,emoji:'🍃',title:'السكر والمزاج',desc:'كيف يؤثر السكر في مزاجك وطاقتك أكثر مما تتخيل، وما البديل الصحي الأمثل.',price:40,cat:'food',bg:'#2a5a3a',tags:'السكر,المزاج,صحة',badge:''},
+  {id:8,emoji:'🔑',title:'كسر المعتقدات المقيِّدة',desc:'المعتقدات التي تعيق تقدمك — كيف تكتشفها وتتحرر منها خطوة بخطوة.',price:65,cat:'beliefs',bg:'#2a3a5a',tags:'معتقدات,حرية,تحول',badge:'الأعمق'},
+  {id:9,emoji:'🌙',title:'النوم وصفاء العقل',desc:'الصلة الخفية بين النوم والقلق والتفكير المفرط — وروتين بسيط لاستعادة السكينة.',price:45,cat:'health',bg:'#2a2a4a',tags:'النوم,القلق,هدوء',badge:''},
+  {id:10,emoji:'💪',title:'ما وراء الإرادة',desc:'لماذا الإرادة وحدها لا تكفي للتغيير — وما العوامل الخفية التي تصنع التحول الحقيقي.',price:55,cat:'mind',bg:'#4a2a2a',tags:'الإرادة,التغيير',badge:''},
+  {id:11,emoji:'🌺',title:'حب الذات الحقيقي',desc:'ما معنى أن تحب نفسك فعلاً — والفرق الجوهري بين تقبّل الذات والاستسلام لها.',price:49,cat:'energy',bg:'#5a2a3a',tags:'حب الذات,قبول',badge:''},
+  {id:12,emoji:'🫁',title:'فن التنفس',desc:'التنفس الواعي كأداة علمية مُثبتة لتهدئة الجهاز العصبي والتعامل مع لحظات الضغط.',price:39,cat:'food',bg:'#3a4a2a',tags:'توتر,تنفس,جسد',badge:'عملي'},
+];
+let cartItems=[];
+
+function getCat(c){return{mind:'العقل والأفكار',health:'الصحة النفسية',food:'الغذاء والجسد',beliefs:'المعتقدات',energy:'الطاقة والعلاقات'}[c]||c;}
+
+// ألوان جميلة للكتب الجديدة
+const BOOK_COLORS = [
+  '#2d4a3e','#3a2d5a','#5a2d2d','#2d3a5a','#4a3a2d',
+  '#1e3a2d','#3d2440','#1a3a4a','#4a2d1a','#2d3d1a',
+  '#3a1e3a','#1a2d4a','#4a3d1a','#2a1a3a','#1a3d3a'
+];
+function randomBookColor(){
+  return BOOK_COLORS[Math.floor(Math.random()*BOOK_COLORS.length)];
+}
+
+// إيموجيات الكتب
+const BOOK_EMOJIS = [
+  '📖','📚','🧠','💡','🌱','✨','🔮','🌙','⭐','🌟',
+  '💫','🎯','🔑','💎','🌊','🦋','🌸','🌿','🍃','🔥',
+  '💪','🧘','❤️','🕊️','🌅','🌄','💭','🎭','🪞','🌺'
+];
+
+// منتقي الإيموجي — يُعيد HTML الجاهز
+function emojiPickerHTML(bookId, currentEmoji){
+  return `
+    <div class="emoji-picker-wrap" id="epw-${bookId}">
+      <div style="display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;margin-bottom:.4rem">
+        <div id="ep-preview-${bookId}" style="font-size:2rem;cursor:pointer;background:var(--warm);width:44px;height:44px;border-radius:8px;display:flex;align-items:center;justify-content:center;border:1.5px solid var(--sand)" onclick="toggleEmojiGrid('${bookId}')" title="اضغط لاختيار إيموجي">${currentEmoji}</div>
+        <input class="ap-input" id="b-emoji-${bookId}" value="${currentEmoji}" style="width:80px;text-align:center;font-size:1.2rem" oninput="document.getElementById('ep-preview-${bookId}').textContent=this.value" placeholder="أو اكتب">
+        <span style="font-size:.72rem;color:var(--text-muted)">اضغط الصورة لاختيار</span>
+      </div>
+      <div id="ep-grid-${bookId}" style="display:none;flex-wrap:wrap;gap:.3rem;background:var(--warm);border:1px solid var(--sand);border-radius:10px;padding:.6rem;max-width:280px">
+        ${BOOK_EMOJIS.map(e=>`<span style="font-size:1.5rem;cursor:pointer;padding:.2rem .3rem;border-radius:6px;transition:background .15s" onmouseover="this.style.background='var(--sand)'" onmouseout="this.style.background=''" onclick="selectEmoji('${bookId}','${e}')">${e}</span>`).join('')}
+      </div>
+    </div>`;
+}
+function toggleEmojiGrid(id){
+  const g=document.getElementById('ep-grid-'+id);
+  g.style.display=g.style.display==='none'?'flex':'none';
+}
+function selectEmoji(bookId, emoji){
+  document.getElementById('b-emoji-'+bookId).value=emoji;
+  document.getElementById('ep-preview-'+bookId).textContent=emoji;
+  document.getElementById('ep-grid-'+bookId).style.display='none';
+}
+
+function render(list){
+  document.getElementById('grid').innerHTML=list.map(b=>`
+    <div class="card">
+      <div class="card-cover" style="background:${b.bg}">
+        <div class="cover-deco"></div><div class="cover-deco2"></div>
+        <span class="card-emoji">${b.emoji}</span>
+        <span class="card-cover-title">${b.title}</span>
+        ${b.badge?`<span class="badge">${b.badge}</span>`:''}
+      </div>
+      <div class="card-body">
+        <div class="cat-label">${getCat(b.cat)}</div>
+        <div class="card-title">${b.title}</div>
+        <div class="card-desc">${b.desc}</div>
+        <div class="card-tags">${String(b.tags).split(',').map(t=>`<span class="tag">${t.trim()}</span>`).join('')}</div>
+        <div class="card-footer">
+          <div class="price">${b.price} ر.س<span class="price-sub">تسليم رقمي فوري</span></div>
+          <button class="add-btn" onclick="addToCart(${b.id})">اشترِ</button>
+        </div>
+      </div>
+    </div>`).join('');
+}
+
+function filter(cat,btn){
+  document.querySelectorAll('.fbtn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  render(cat==='all'?books:books.filter(b=>b.cat===cat));
+}
+
+function addToCart(id){
+  const book=books.find(b=>b.id===id);
+  if(!cartItems.find(i=>i.id===id)) cartItems.push({...book});
+  updateCartUI();
+  const t=document.getElementById('toast');
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),2200);
+}
+function removeFromCart(id){cartItems=cartItems.filter(i=>i.id!==id);updateCartUI();}
+function updateCartUI(){
+  const cnt=cartItems.length;
+  document.getElementById('cnt').textContent=cnt;
+  const c=document.getElementById('cartItems');
+  const tot=document.getElementById('cartTotal');
+  if(!cnt){c.innerHTML='<p class="cart-empty">سلتك فارغة<br>أضف كتاباً للبدء ✨</p>';tot.style.display='none';return;}
+  c.innerHTML=cartItems.map(i=>`<div class="cart-item"><div class="cart-item-emoji">${i.emoji}</div><div class="cart-item-info"><div class="cart-item-title">${i.title}</div><div class="cart-item-price">${i.price} ر.س</div></div><button class="remove-btn" onclick="removeFromCart(${i.id})">✕</button></div>`).join('');
+  const sum=cartItems.reduce((a,i)=>a+i.price,0);
+  document.getElementById('subtotal').textContent=sum+' ر.س';
+  document.getElementById('total').textContent=sum+' ر.س';
+  tot.style.display='block';
+}
+function openCart(){document.getElementById('cartSidebar').classList.add('open');document.getElementById('overlay').classList.add('open');}
+function closeCart(){document.getElementById('cartSidebar').classList.remove('open');document.getElementById('overlay').classList.remove('open');}
+function checkout(){
+  const freshBooks=window.books||books;
+  const freshCart=cartItems.map(item=>{
+    const fresh=freshBooks.find(b=>b.id==item.id);
+    return fresh?{...item,...fresh}:item;
+  });
+  if(!freshCart.length) return;
+  // كتاب واحد له رابط Gumroad خاص
+  if(freshCart.length===1 && freshCart[0].gumroadUrl){
+    window.open(freshCart[0].gumroadUrl,'_blank');
+    return;
+  }
+  // أكثر من كتاب أو ما في رابط خاص — افتح المتجر العام
+  window.open('https://nooralzat.gumroad.com','_blank');
+}
+
+/* ─── لوحة تحكم ─── */
+function openAdminLogin(){
+  loginAttempts=0;
+  document.getElementById('adminOverlay').classList.add('open');
+  document.getElementById('adminLogin').style.display='block';
+  document.getElementById('adminPass').value='';
+  document.getElementById('adminPass').type='password';
+  document.getElementById('adminPass').disabled=false;
+  const err=document.getElementById('passErr');
+  err.style.display='none';
+  err.innerHTML='❌ كلمة السر خاطئة، المحاولات المتبقية: <span id="attemptsLeft">3</span>';
+  if(isLocked()){
+    document.getElementById('adminPass').disabled=true;
+    startCountdown();
+  } else {
+    setTimeout(()=>document.getElementById('adminPass').focus(),150);
+  }
+}
+function closeAdminLogin(){
+  document.getElementById('adminOverlay').classList.remove('open');
+  document.getElementById('adminLogin').style.display='none';
+}
+function checkPass(){
+  const errEl=document.getElementById('passErr');
+  if(isLocked()){
+    const rem=getLockRemaining();
+    errEl.innerHTML=`🔒 محاولات كثيرة! انتظر <span id="lockCountdown">${formatTime(rem)}</span>`;
+    errEl.style.display='block';
+    startCountdown();
+    return;
+  }
+  if(loginAttempts>=MAX_ATTEMPTS){
+    localStorage.setItem('noor_lock_time',Date.now());
+    loginAttempts=0;
+    startCountdown();
+    return;
+  }
+  const inputVal=document.getElementById('adminPass').value;
+  hashPass(inputVal).then(hash=>{
+    if(hash===ADMIN_HASH){
+      loginAttempts=0;
+      localStorage.removeItem('noor_lock_time');
+      closeAdminLogin();
+      renderBooksAdmin();
+      document.getElementById('adminPanel').classList.add('open');
+    } else {
+      loginAttempts++;
+      const left=MAX_ATTEMPTS-loginAttempts;
+      if(left>0){
+        errEl.innerHTML=`❌ كلمة السر خاطئة، المحاولات المتبقية: <span id="attemptsLeft">${left}</span>`;
+      } else {
+        localStorage.setItem('noor_lock_time',Date.now());
+        loginAttempts=0;
+        startCountdown();
+      }
+      errEl.style.display='block';
+      document.getElementById('adminPass').value='';
+      document.getElementById('adminPass').focus();
+    }
+  });
+}
+
+let countdownInterval=null;
+function startCountdown(){
+  const errEl=document.getElementById('passErr');
+  document.getElementById('adminPass').disabled=true;
+  if(countdownInterval) clearInterval(countdownInterval);
+  countdownInterval=setInterval(()=>{
+    const rem=getLockRemaining();
+    if(rem<=0){
+      clearInterval(countdownInterval);
+      document.getElementById('adminPass').disabled=false;
+      errEl.style.display='none';
+      errEl.innerHTML='❌ كلمة السر خاطئة، المحاولات المتبقية: <span id="attemptsLeft">3</span>';
+      localStorage.removeItem('noor_lock_time');
+      document.getElementById('adminPass').focus();
+      return;
+    }
+    errEl.innerHTML=`🔒 محاولات كثيرة! انتظر <span id="lockCountdown">${formatTime(rem)}</span>`;
+    errEl.style.display='block';
+  },1000);
+}
+function closeAdmin(){document.getElementById('adminPanel').classList.remove('open');}
+function apTab(name,btn){
+  document.querySelectorAll('.ap-tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.ap-section').forEach(s=>s.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('tab-'+name).classList.add('active');
+}
+
+function saveGeneral(){
+  document.getElementById('vBrandName').textContent=document.getElementById('ap-brandName').value;
+  document.getElementById('vBrandSub').textContent=document.getElementById('ap-brandSub').value;
+  document.getElementById('vFooterName').textContent=document.getElementById('ap-brandName').value;
+  document.title=document.getElementById('ap-brandName').value;
+  document.getElementById('vHeroTag').textContent=document.getElementById('ap-heroTag').value;
+  document.getElementById('vHeroTitle').innerHTML=document.getElementById('ap-heroT1').value+'<br><em>'+document.getElementById('ap-heroT2').value+'</em>';
+  document.getElementById('vHeroDesc').textContent=document.getElementById('ap-heroDesc').value;
+  document.getElementById('vQuote').textContent=document.getElementById('ap-quote').value;
+  document.getElementById('vQuoteAuthor').textContent=document.getElementById('ap-quoteAuthor').value;
+  checkoutURL=document.getElementById('ap-checkout').value;
+  const stats=document.querySelectorAll('#vStatsBar .stat');
+  [1,2,3,4].forEach(n=>{
+    if(stats[n-1]){
+      stats[n-1].querySelector('.stat-n').textContent=document.getElementById('s'+n+'n').value;
+      stats[n-1].querySelector('.stat-l').textContent=document.getElementById('s'+n+'l').value;
+    }
+  });
+  showSaved('general');
+}
+
+function liveColor(name,val){
+  document.documentElement.style.setProperty('--'+name,val);
+  const p=document.getElementById('prev-'+name);
+  if(p) p.style.background=val;
+}
+function saveColors(){
+  const colorKeys=['primary','deep','cream','warm','sand','gold','sage'];
+  const saved={};
+  colorKeys.forEach(c=>{
+    const val=document.getElementById('c-'+c).value;
+    liveColor(c,val);
+    saved[c]=val;
+  });
+  localStorage.setItem('noor_colors',JSON.stringify(saved));
+  showSaved('colors');
+}
+function loadSavedColors(){
+  try{
+    const saved=JSON.parse(localStorage.getItem('noor_colors')||'{}');
+    Object.entries(saved).forEach(([c,val])=>{
+      document.documentElement.style.setProperty('--'+c,val);
+      const inp=document.getElementById('c-'+c);
+      const prev=document.getElementById('prev-'+c);
+      if(inp) inp.value=val;
+      if(prev) prev.style.background=val;
+    });
+  }catch(e){}
+}
+
+const pdfPending={};
+function handlePdfSelect(input,bookId){
+  const file=input.files[0];
+  if(!file) return;
+  if(file.size>30*1024*1024){alert('الملف كبير جداً! الحد الأقصى 30 ميجابايت.');return;}
+  const statusEl=document.getElementById('pdf-status-'+bookId);
+  if(statusEl){statusEl.className='pdf-status no-file';statusEl.textContent='⏳ جاري التحضير...';}
+  const reader=new FileReader();
+  reader.onload=function(e){
+    pdfPending[bookId]={name:file.name,base64:e.target.result};
+    if(statusEl){statusEl.className='pdf-status has-file';statusEl.textContent='✅ جاهز للرفع: '+file.name;}
+  };
+  reader.readAsDataURL(file);
+}
+
+function changePassword(){
+  const old=document.getElementById('oldPass').value;
+  const n1=document.getElementById('newPass1').value;
+  const n2=document.getElementById('newPass2').value;
+  const err=document.getElementById('pass-change-err');
+  err.style.display='none';
+  if(!n1||n1.length<6){err.textContent='❌ كلمة السر الجديدة قصيرة جداً (6 أحرف على الأقل)';err.style.display='block';return;}
+  if(n1!==n2){err.textContent='❌ كلمتا السر غير متطابقتين';err.style.display='block';return;}
+  hashPass(old).then(oldHash=>{
+    if(oldHash!==ADMIN_HASH){err.textContent='❌ كلمة السر الحالية خاطئة';err.style.display='block';return;}
+    hashPass(n1).then(newHash=>{
+      ADMIN_HASH=newHash;
+      localStorage.setItem('noor_admin_hash',newHash);
+      localStorage.removeItem('noor_admin_pass');
+      document.getElementById('oldPass').value='';
+      document.getElementById('newPass1').value='';
+      document.getElementById('newPass2').value='';
+      showSaved('pass');
+    });
+  });
+}
+
+window.addEventListener('load',function(){
+  if(typeof Paddle==='undefined') return;
+  Paddle.Initialize({
+    token:'live_23052b9a879632fe5b9386e87a6',
+    eventCallback:function(data){
+      if(data.name==='checkout.completed'){
+        const freshBooks=window.books||books;
+        cartItems.forEach(item=>{
+          const fresh=freshBooks.find(b=>b.id==item.id);
+          const book=fresh||item;
+          if(book.pdfUrl){
+            const a=document.createElement('a');
+            a.href=book.pdfUrl;
+            a.download=book.pdfName||book.title+'.pdf';
+            document.body.appendChild(a);
+            a.click();
+            setTimeout(()=>document.body.removeChild(a),500);
+          }
+        });
+        cartItems=[];
+        updateCartUI();
+        closeCart();
+        const t=document.getElementById('toast');
+        t.innerHTML='<span class="toast-dot" style="background:#c9993a"></span> 🎉 شكراً! جاري تحميل كتبك...';
+        t.classList.add('show');
+        setTimeout(()=>t.classList.remove('show'),4000);
+      }
+    }
+  });
+});
+
+function renderBooksAdmin(){
+  const list=window.books||books;
+  document.getElementById('booksAdminList').innerHTML=list.map(b=>{
+    const hasPdf=b.pdfName||b.pdfUrl;
+    return `
+    <div class="book-admin-card" id="bac-${b.id}">
+      <div class="bac-top" onclick="toggleBook(${b.id})">
+        <div class="bac-emoji">${b.emoji}</div>
+        <div class="bac-info">
+          <div class="bac-title">${b.title}</div>
+          <div class="bac-price">${b.price} ر.س &nbsp;${hasPdf?'<span style="color:#2e6b30;font-size:.72rem">✅ PDF</span>':'<span style="color:#c0392b;font-size:.72rem">⚠️ لا PDF</span>'}&nbsp;${b.paddlePriceId?'<span style="color:#2e6b30;font-size:.72rem">✅ دفع</span>':'<span style="color:#c0392b;font-size:.72rem">⚠️ لا دفع</span>'}</div>
+        </div>
+        <span class="bac-arrow" id="arr-${b.id}">▼</span>
+      </div>
+      <div class="bac-fields" id="bf-${b.id}">
+        <label class="ap-label">الأيقونة</label>${emojiPickerHTML(b.id, b.emoji)}
+        <label class="ap-label">العنوان</label><input class="ap-input" id="b-title-${b.id}" value="${b.title}">
+        <label class="ap-label">الوصف</label><input class="ap-input" id="b-desc-${b.id}" value="${b.desc}">
+        <div class="ap-row">
+          <div><label class="ap-label">السعر (ر.س)</label><input class="ap-input" id="b-price-${b.id}" value="${b.price}" type="number" min="0"></div>
+          <div><label class="ap-label">الشارة (اختياري)</label><input class="ap-input" id="b-badge-${b.id}" value="${b.badge||''}"></div>
+        </div>
+        <label class="ap-label">🏷️ Paddle Price ID</label>
+        <input class="ap-input" id="b-paddle-${b.id}" value="${b.paddlePriceId||''}" placeholder="pri_xxxxxxxxxxxxxxxxxxxxxxxx">
+        <label class="ap-label">🛒 رابط Gumroad للكتاب</label>
+        <input class="ap-input" id="b-gumroad-${b.id}" value="${b.gumroadUrl||''}" placeholder="https://nooralzat.gumroad.com/l/xxxxx">
+        <label class="ap-label">الفئة</label>
+        <select class="ap-input" id="b-cat-${b.id}">
+          ${['mind','health','food','beliefs','energy'].map(c=>`<option value="${c}"${b.cat===c?' selected':''}>${getCat(c)}</option>`).join('')}
+        </select>
+        <label class="ap-label">الكلمات المفتاحية (مفصولة بفاصلة)</label>
+        <input class="ap-input" id="b-tags-${b.id}" value="${b.tags}">
+        <label class="ap-label">لون غلاف الكتاب</label>
+        <div style="display:flex;align-items:center;gap:.8rem;margin-bottom:.9rem">
+          <input type="color" style="width:44px;height:36px;border:none;border-radius:6px;cursor:pointer" id="b-bg-${b.id}" value="${b.bg}">
+          <span style="font-size:.78rem;color:var(--text-muted)">اختر اللون</span>
+        </div>
+        <label class="ap-label">📄 ملف PDF الكتاب</label>
+        <div class="pdf-upload-box" onclick="document.getElementById('b-pdf-${b.id}').click()">
+          <input type="file" accept="application/pdf" id="b-pdf-${b.id}" style="display:none" onchange="handlePdfSelect(this,${b.id})">
+          <div style="font-size:1.6rem">📤</div>
+          <div style="font-size:.8rem;color:var(--text-muted)">اضغط لرفع ملف PDF</div>
+          <div id="pdf-status-${b.id}" class="pdf-status ${hasPdf?'has-file':'no-file'}">
+            ${hasPdf?'✅ '+b.pdfName:'⚠️ لم يُرفع بعد'}
+          </div>
+        </div>
+        <button class="bac-del" onclick="deleteBook(${b.id})">🗑️ حذف هذا الكتاب</button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function toggleBook(id){
+  const f=document.getElementById('bf-'+id);
+  const a=document.getElementById('arr-'+id);
+  const open=f.classList.toggle('open');
+  a.classList.toggle('open',open);
+}
+function addNewBook(){
+  const nid=Date.now();
+  books.push({id:nid,emoji:'📖',title:'كتاب جديد',desc:'أضف وصف الكتاب هنا.',price:49,cat:'mind',bg:randomBookColor(),tags:'موضوع,فئة',badge:''});
+  renderBooksAdmin();
+  render(books);
+  setTimeout(()=>{const el=document.getElementById('bf-'+nid);if(el){toggleBook(nid);el.closest('.book-admin-card').scrollIntoView({behavior:'smooth'});}},100);
+}
+function deleteBook(id){
+  if(!confirm('هل تريد حذف هذا الكتاب؟')) return;
+  books=books.filter(b=>b.id!==id);
+  renderBooksAdmin();render(books);
+}
+function saveBooks(){
+  books=books.map(b=>{
+    const g=id=>document.getElementById(id+'_'+b.id)||document.getElementById(id+b.id);
+    return{
+      ...b,
+      emoji:document.getElementById('b-emoji-'+b.id)?.value||b.emoji,
+      title:document.getElementById('b-title-'+b.id)?.value||b.title,
+      desc:document.getElementById('b-desc-'+b.id)?.value||b.desc,
+      price:parseInt(document.getElementById('b-price-'+b.id)?.value)||b.price,
+      cat:document.getElementById('b-cat-'+b.id)?.value||b.cat,
+      tags:document.getElementById('b-tags-'+b.id)?.value||b.tags,
+      badge:document.getElementById('b-badge-'+b.id)?.value||'',
+      bg:document.getElementById('b-bg-'+b.id)?.value||b.bg,
+    };
+  });
+  render(books);renderBooksAdmin();showSaved('books');
+}
+function changePassword(){
+  const old=document.getElementById('oldPass').value;
+  const n1=document.getElementById('newPass1').value;
+  const n2=document.getElementById('newPass2').value;
+  const err=document.getElementById('pass-change-err');
+  err.style.display='none';
+  if(old!==ADMIN_PASS){err.textContent='❌ كلمة السر الحالية خاطئة';err.style.display='block';return;}
+  if(!n1||n1.length<3){err.textContent='❌ كلمة السر الجديدة قصيرة جداً (3 أحرف على الأقل)';err.style.display='block';return;}
+  if(n1!==n2){err.textContent='❌ كلمتا السر غير متطابقتين';err.style.display='block';return;}
+  ADMIN_PASS=n1;
+  localStorage.setItem('noor_admin_pass', n1);
+  document.getElementById('oldPass').value='';
+  document.getElementById('newPass1').value='';
+  document.getElementById('newPass2').value='';
+  showSaved('pass');
+}
+function showSaved(tab){
+  const el=document.getElementById('saved-'+tab);
+  if(!el)return;
+  el.style.display='block';
+  setTimeout(()=>el.style.display='none',2500);
+}
+
+function togglePassVis(inputId,btn){
+  const inp=document.getElementById(inputId);
+  if(inp.type==='password'){inp.type='text';btn.textContent='🙈';}
+  else{inp.type='password';btn.textContent='👁';}
+}
+
+let secretClicks=0;
+let secretTimer=null;
+function secretClick(){
+  secretClicks++;
+  clearTimeout(secretTimer);
+  secretTimer=setTimeout(()=>secretClicks=0,2000);
+  if(secretClicks>=7){
+    secretClicks=0;
+    clearTimeout(secretTimer);
+    openAdminLogin();
+  }
+}
+
+render(books);
+window._defaultBooks=JSON.parse(JSON.stringify(books));
+window.books=books;
+loadSavedColors();
+</script>
+
+<!-- Firebase -->
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getFirestore, collection, addDoc, updateDoc, deleteDoc, doc, onSnapshot, orderBy, query } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyC1TVAdH_bxFkW569WS4qiENljdi70KRfw",
+  authDomain: "nooralzat.firebaseapp.com",
+  projectId: "nooralzat",
+  storageBucket: "nooralzat.firebasestorage.app",
+  messagingSenderId: "944452689783",
+  appId: "1:944452689783:web:b504d52d07a914b6e40b72",
+  measurementId: "G-3QMVT7JH2Y"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+const booksCol = collection(db, 'books');
+const q = query(booksCol, orderBy('order','asc'));
+
+let initialized = false;
+
+// مراقبة التغييرات الفورية
+onSnapshot(q, (snapshot) => {
+  if(snapshot.empty && !initialized){
+    initialized = true;
+    // أول مرة فقط — رفع الكتب الافتراضية
+    (async()=>{
+      for(let i=0;i<window._defaultBooks.length;i++){
+        await addDoc(booksCol,{...window._defaultBooks[i],order:i});
+      }
+    })();
+  } else if(!snapshot.empty) {
+    initialized = true;
+    window.books = snapshot.docs.map(d=>({...d.data(),firebaseId:d.id}));
+    render(window.books);
+    const adminList = document.getElementById('booksAdminList');
+    if(adminList && adminList.innerHTML.trim()!='') renderBooksAdmin();
+  }
+});
+
+// حفظ الكتب
+window.saveBooksFirebase = async function(){
+  const el=document.getElementById('saved-books');
+  if(el){el.textContent='⏳ جاري الحفظ...';el.style.display='block';}
+  for(const b of window.books){
+    if(!b.firebaseId) continue;
+    const updated={
+      id:b.id,
+      emoji:document.getElementById('b-emoji-'+b.id)?.value||b.emoji,
+      title:document.getElementById('b-title-'+b.id)?.value||b.title,
+      desc:document.getElementById('b-desc-'+b.id)?.value||b.desc,
+      price:parseInt(document.getElementById('b-price-'+b.id)?.value)||b.price,
+      cat:document.getElementById('b-cat-'+b.id)?.value||b.cat,
+      tags:document.getElementById('b-tags-'+b.id)?.value||b.tags,
+      badge:document.getElementById('b-badge-'+b.id)?.value||'',
+      bg:document.getElementById('b-bg-'+b.id)?.value||b.bg,
+      paddlePriceId:document.getElementById('b-paddle-'+b.id)?.value||b.paddlePriceId||'',
+      gumroadUrl:document.getElementById('b-gumroad-'+b.id)?.value||b.gumroadUrl||'',
+      order:b.order||0,
+    };
+    if(pdfPending[b.id]){
+      updated.pdfName=pdfPending[b.id].name;
+      updated.pdfUrl=pdfPending[b.id].base64;
+      delete pdfPending[b.id];
+    } else {
+      if(b.pdfName) updated.pdfName=b.pdfName;
+      if(b.pdfUrl)  updated.pdfUrl=b.pdfUrl;
+    }
+    await updateDoc(doc(db,'books',b.firebaseId),updated);
+  }
+  if(el){el.textContent='✅ تم الحفظ!';}
+  setTimeout(()=>{if(el)el.style.display='none';},3000);
+  renderBooksAdmin();
+}
+
+// إضافة كتاب جديد
+window.addNewBookFirebase = async function(){
+  const newBook={
+    id:Date.now(),
+    emoji:'📖',
+    title:'كتاب جديد',
+    desc:'أضف وصف الكتاب هنا.',
+    price:49,
+    cat:'mind',
+    bg:randomBookColor(),
+    tags:'موضوع,فئة',
+    badge:'',
+    order: window.books ? window.books.length : 99
+  };
+  await addDoc(booksCol, newBook);
+}
+
+// حذف كتاب — يستخدم firebaseId مباشرة
+window.deleteBookFirebase = async function(firebaseId){
+  if(!confirm('هل تريد حذف هذا الكتاب؟')) return;
+  await deleteDoc(doc(db,'books',firebaseId));
+}
+
+// تعديل deleteBook لاستخدام Firebase
+window.deleteBook = function(id){
+  const b = (window.books||[]).find(x=>x.id==id);
+  if(b && b.firebaseId){
+    window.deleteBookFirebase(b.firebaseId);
+  }
+};
+</script>
+</body>
+</html>
